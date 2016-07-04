@@ -3,7 +3,7 @@ body {
 }
 
 #wrapper {
-    padding-left: 0;
+    padding-left: 30%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -11,14 +11,14 @@ body {
 }
 
 #wrapper.toggled {
-    padding-left: 60%;
+    padding-left: 10%;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
     left: 60%;
-    width: 0px;
+    width: 30%;
     height: 100%;
     margin-left: -60%;
     overflow-y: auto;
@@ -31,35 +31,31 @@ body {
 }
 
 #sidebar-wrapper img{
-    width: 70%;
+    width: 50%;
     height: auto;
 
     margin-top: 15%;
     margin-bottom: 15%;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 60%;
+    width: 10%;
 }
 
 #wrapper.toggled #sidebar-wrapper img{
-    width: 70%;
+    width: 50%;
     height: auto;
 }
 
 #page-content-wrapper {
     width: 100%;
-    position: absolute;
-    padding: 15px;
+    position: relative;
+    padding: 20px;
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -60%;
+    position: relative;
+    margin-right: 0%;
 }
 
 /* Sidebar Styles */
@@ -73,38 +69,39 @@ body {
     list-style: none;
 }
 
-@media(min-width:768px) {
+@media(max-width:768px) {
     #wrapper {
-        padding-left: 30%;
+        padding-left: 0;
     }
 
     #wrapper.toggled {
-        padding-left: 10%;
+        padding-left: 60%;
     }
 
     #sidebar-wrapper {
-        width: 30%;
+        width: 0;
     }
 
     #sidebar-wrapper img {
-        width: 70%;
+        width: 50%;
+
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 10%;
+        width: 60%;
     }
 
     #wrapper.toggled #sidebar-wrapper img {
-        width: 70%;
+        width: 50%;
     }
 
     #page-content-wrapper {
-        padding: 20px;
-        position: relative;
+        padding: 15px;
+        position: absolute;
     }
 
     #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
+        position: absolute;
+        margin-right: -60%;
     }
 }
