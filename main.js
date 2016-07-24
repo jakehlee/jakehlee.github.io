@@ -9,4 +9,7 @@ $(document).ready(function() {
     	document.styleSheets[0].addRule('.front:before', 'height: ' + newHeight + "; width: " + newWidth + ";");
 	}
 	console.log($(window).width());
+	if($(window).width() < 768){
+		resizeBackground();
+	}
 });
