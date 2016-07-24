@@ -7,7 +7,6 @@ body {
 }
 
 .front {
-
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,11 +16,12 @@ body {
 }
 
 /* credit: http://fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property */
-.front::before {
+.front:before {
     content: ' ';
     position: fixed;
-    height: 100vh;
-    width: 100vw;
+    display: block;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     background-color: white;
