@@ -28,6 +28,8 @@ body {
     background-size: cover;
     will-change: transform;
     z-index: -1;
+
+
 }
 
 .indexcard {
@@ -61,7 +63,7 @@ body {
 
 .education {
     height: 100vh;
-    background-color: white;
+    background-color: blue;
 }
 
 @media(max-width:768px) {
