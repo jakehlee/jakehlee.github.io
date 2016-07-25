@@ -20,10 +20,8 @@ body {
     content: ' ';
     position: fixed;
     display: block;
-    /*
     height: 100%;
     width: 100%;
-    */
     top: 0;
     left: 0;
     background: url('skyline_web.png') no-repeat center center;
