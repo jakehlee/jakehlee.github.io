@@ -13,6 +13,7 @@ body {
     align-items: center;
     overflow: hidden;
     position: relative;
+    transition: 0.5s;
 }
 
 /* credit: http://fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property */
@@ -31,8 +32,7 @@ body {
     -o-background-size: cover;
     will-change: transform;
     z-index: -1;
-
-
+    transition: 0.5s;
 }
 
 .indexcard {
