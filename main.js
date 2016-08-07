@@ -6,8 +6,8 @@ $(document).ready(function() {
 	function resizeIndexBackground() {
 		var newHeight = screen.height;
 		var newWidth = screen.width;
-    	bg.height(jQuery(window).height() + 60);
-    	var rule1 = "#div1::before {width: " + newWidth + "px !important; height: " + newHeight +"px !important; background-size: auto " + newHeight + "px !important}";
+    	bg.height(screen.height);
+    	var rule1 = "#div1::before {width: " + newWidth + "px !important; height: " + newHeight +"px !important}";
     	document.styleSheets[1].insertRule(rule1, 1);
     	var rule2 = ".static-full {width: " + newWidth + "px !important; height: " + newHeight + "px !important}";
     	document.styleSheets[1].insertRule(rule2, 2);
