@@ -4,10 +4,10 @@ $(document).ready(function() {
     var bg = $("#div1");
 	$(window).resize("resizeIndexBackground");
 	function resizeIndexBackground() {
-		var newHeight = jQuery(window).height() + 60;
+		var newHeight = jQuery(window).height() + 70;
 		var newWidth = jQuery(window).width();
     	bg.height(jQuery(window).height() + 60);
-    	var rule1 = "#div1::before {width: " + newWidth + "px !important; height: " + newHeight +"px !important}";
+    	var rule1 = "#div1::before {width: " + newWidth + "px !important; height: " + newHeight +"px !important; background-size: auto " + newHeight + "px !important}";
     	document.styleSheets[1].insertRule(rule1, 1);
     	var rule2 = ".static-full {width: " + newWidth + "px !important; height: " + newHeight + "px !important}";
     	document.styleSheets[1].insertRule(rule2, 2);
