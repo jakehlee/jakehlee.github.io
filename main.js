@@ -7,7 +7,7 @@ $(document).ready(function() {
 		var newHeight = screen.height;
 		var newWidth = screen.width;
     	bg.height(screen.height);
-    	var rule1 = "#div1::before {width: " + newWidth + "px !important; height: " + newHeight +"px !important; background-size: " + newWidth + "px " + newHeight + "px !important}";
+    	var rule1 = "#div1::before {width: " + newWidth + "px !important; height: " + newHeight +"px !important}";
     	document.styleSheets[1].insertRule(rule1, 1);
     	var rule2 = ".static-full {width: " + newWidth + "px !important; height: " + newHeight + "px !important}";
     	document.styleSheets[1].insertRule(rule2, 2);
