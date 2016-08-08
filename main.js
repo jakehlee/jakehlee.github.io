@@ -13,6 +13,14 @@ $(document).ready(function() {
     	document.styleSheets[1].insertRule(rule2, 2);
 	}
 
+	$('#highlight').click(function(event) {
+	    event.preventDefault();
+	    $('html, body').animate({
+            scrollTop: $("#work").offset().top
+        }, 600,'easeInOutQuart');
+	    window.location.hash = $(this).attr('href');
+	});
+
 	if($(window).width() < 768){
 		resizeIndexBackground();
 	}
