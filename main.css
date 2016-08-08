@@ -52,14 +52,21 @@ p {
 }
 
 .indexcard {
-	height: 80%;
-	width: 80%;
+	height: 80vh;
+	width: 80vh;
 	/*
 	box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.2), -4px 0px 4px 0px rgba(0,0,0,0.2);
 	*/
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 	background-color: rgba(255,255,255,0.8);
 	text-align: center;
+}
+
+@media(max-width:768px){
+	.indexcard {
+		height: 80%;
+		width: 80%;
+	}
 }
 
 .indexcard img{
@@ -97,7 +104,7 @@ p {
 }
 
 #resume {
-	margin: 2%;
+	margin: 10%;
 }
 
 .highlight-right {
@@ -151,7 +158,6 @@ p {
 }
 
 .highlight-container{
-	margin-top: 4%;
 	padding: 5px;
 }
 
