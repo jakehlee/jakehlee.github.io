@@ -1,0 +1,9 @@
+.text-switch{
+	text-align: left;
+}
+
+@media (min-width:767.98px) {
+	.text-switch{
+		text-align: right;
+	}
+}
