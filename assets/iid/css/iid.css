@@ -14,9 +14,9 @@
 }
 
 .img-stack img{
-	max-height: 175px;
+	max-width: 30%;
 	box-shadow: 3px 3px 1px rgba(0,0,0,0.1);
-	margin-left: 30%;
+	left: 35%;
 }
 
 @media(min-width: 767.98px) {
@@ -26,9 +26,9 @@
 	}
 
 	.img-stack img{
-		max-height: 250px;
+		max-width: 200px;
 		margin-top: 25px;
-		margin-right: 10%;
+		margin-left: 0%;
 	}
 
 }
