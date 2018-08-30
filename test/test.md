@@ -1,6 +1,6 @@
 ---
 title: Test
-layout: default
+layout: page
 ---
 This is a test markdown file to test default jekyll layouts.
-This layout is default.
+Is there a default 'page' layout?
