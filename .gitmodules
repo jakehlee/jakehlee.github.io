@@ -1,0 +1,3 @@
+[submodule "interactive-invariance"]
+	path = interactive-invariance
+	url = https://github.com/jakehlee/interactive-invariance.git
