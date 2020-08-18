@@ -87,7 +87,7 @@
 		<div>
 			<h1 class="text-center">Abstract</h1>
 			<br>
-			<p class="text-left">Feature extraction with convolutional neural networks (CNNs) is a popular method to represent images for machine learning tasks. These representations seek to capture global image content, and ideally should be independent of geometric transformations. We focus on measuring and visualizing the shift invariance of extracted features from popular off-the-shelf CNN models. We present the results of three experiments comparing representations of millions of images with exhaustively shifted objects, examining both local invariance (within a few pixels) and global invariance (across the image frame). We conclude that features extracted from popular networks are not globally invariant, and that biases and artifacts exist within this variance. Additionally, we determine that anti-aliased models significantly improve local invariance, but do not impact global invariance. Finally, we provide a code repository for experiment reproduction, as well as a website to interact with our results.</p>
+			<p class="text-left lead">Feature extraction with convolutional neural networks (CNNs) is a popular method to represent images for machine learning tasks. These representations seek to capture global image content, and ideally should be independent of geometric transformations. We focus on measuring and visualizing the shift invariance of extracted features from popular off-the-shelf CNN models. We present the results of three experiments comparing representations of millions of images with exhaustively shifted objects, examining both local invariance (within a few pixels) and global invariance (across the image frame). We conclude that features extracted from popular networks are not globally invariant, and that biases and artifacts exist within this variance. Additionally, we determine that anti-aliased models significantly improve local invariance, but do not impact global invariance. Finally, we provide a code repository for experiment reproduction, as well as a website to interact with our results.</p>
 		</div>
 		<hr>
 		<div class="text-center">
@@ -128,6 +128,203 @@
 			</div>
 		</div>
 		<hr>
+		<div>
+			<h1 class="text-center">Figure 3 Additional Heatmaps: Large-Patch Dataset</h1>
+			<p>Cosine similarity heatmaps of the large-patch dataset. Each pixel represents the average cosine similarity of different object patches at that shift location.</p>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Model</th>
+						<th scope="col" class="text-center">Top-Left</th>
+						<th scope="col" class="text-center">Top-Right</th>
+						<th scope="col" class="text-center">Center</th>
+						<th scope="col" class="text-center">Bottom-Left</th>
+						<th scope="col" class="text-center">Bottom-Right</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">AlexNet fc6 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc6 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_large_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc7 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc7 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_large_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc8 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc8 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_large_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">ResNet-50 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">ResNet-50 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_large_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">MobileNetV2 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">MobileNetV2 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/br.png"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr>
+		<div>
+			<h1 class="text-center">Figure 4 Additional Heatmaps: Small-Patch Dataset</h1>
+			<p>Cosine similarity heatmaps of the small-patch dataset. Each pixel represents the average cosine similarity of different object patches at that shift location.</p>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Model</th>
+						<th scope="col" class="text-center">Top-Left</th>
+						<th scope="col" class="text-center">Top-Right</th>
+						<th scope="col" class="text-center">Center</th>
+						<th scope="col" class="text-center">Bottom-Left</th>
+						<th scope="col" class="text-center">Bottom-Right</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">AlexNet fc6 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc6 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc6_export/alexfc6_small_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc7 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc7 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc7_export/fc7_small_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc8 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">AlexNet fc8 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/alexfc8_export/alexfc8_small_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">ResNet-50 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">ResNet-50 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/resnet50_export/resnet_small_white_AA/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">MobileNetV2 <br> Off-the-Shelf</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_small_white/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_small_white/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_small_white/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_small_white/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_small_white/br.png"></td>
+					</tr>
+					<tr>
+						<th scope="row">MobileNetV2 <br> Anti-Aliased</th>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/tl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/tr.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/c.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/bl.png"></td>
+						<td class="text-center heatmap"><img src="assets/vsi/img/mobilenet_export/mobile_large_white_AA/br.png"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	
 

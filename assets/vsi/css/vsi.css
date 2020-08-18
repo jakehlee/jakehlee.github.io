@@ -1,3 +1,7 @@
+.heatmap img{
+	max-width: 100%;
+}
+
 .text-switch{
 	text-align: left;
 }
